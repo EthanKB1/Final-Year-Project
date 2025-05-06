@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  thehive:
+    image: strangebee/thehive:5
+    container_name: thehive
+    ports:
+      - "9000:9000"
+    envionment:
+      - JAVA_OPTS=-Xms2g -Xmx2g
+      - THEHIVE_elasticsearch__hosts=["http://192.168.0.123:9200"]
+      - THEHIVE_configurationFile=/etc/thehive/application.conf
+    networks:
+      - thehive-net
+    volumes:
+      - thehive-data:/data
+      - ~/thehive-config/application.conf:/etc/thehive/application.conf
+
+volumes:
+  thehive-data:
+
+networks:
+  thehive-net:
+    driver: bridge
