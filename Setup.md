@@ -10,22 +10,38 @@
    sudo docker-compose up -d
    sudo docker ps
 
-Access TheHive:
+### Access TheHive:
 
 Open Firefox
-Navigate to: http://localhost:9000
-Login with: ethan@thehive.local / ethan1
+Navigate to: 
 
-Ubuntu Server (Cortex & Elasticsearch)
+```
+http://localhost:9000
+```
+Login with: 
+```
+ethan@thehive.local / [contact repository owner for credentials]
+```
+### Ubuntu Server (Cortex & Elasticsearch)
 
-Login to Ubuntu Server: ethan / student1
+Login to Ubuntu Server: 
+```
+ethan / [contact repository owner for credentials]
+```
 Start Elasticsearch and Cortex:
-shellcd elasticsearch
+```shell
+cd elasticsearch
 sudo docker-compose up -d
 sudo docker ps
-
+```
 Access Cortex from Ubuntu Desktop:
 
 Open Firefox
-Navigate to: http://192.168.0.123:9001
-Login with: ethanadminkatano / ethan2
+Navigate to: 
+```
+http://192.168.0.123:9001
+```
+Login with: 
+```
+ethanadminkatano / [contact repository owner for credentials]
+```
